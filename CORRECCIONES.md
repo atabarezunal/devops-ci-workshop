@@ -28,3 +28,10 @@
 * **Archivo:** `app.py`
 * **Problema:** La aplicación estaba configurada para ejecutarse en el puerto `5001`
 * **Solución:** Cambié `port=5001` por `port=5000` en `app.run()`
+
+## Error 5
+
+* **Archivo:** `requirements.txt`
+* **Problema:** El archivo requirements.txt no incluía pytest
+* **Solución:** Agregué pytest al archivo para que también se instale automáticamente en el pipeline
+
