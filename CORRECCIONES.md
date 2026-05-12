@@ -35,3 +35,7 @@
 * **Problema:** El archivo requirements.txt no incluía pytest
 * **Solución:** Agregué pytest al archivo para que también se instale automáticamente en el pipeline
 
+## Error 6 
+* **Archivo:** 'docker-compose.yml'
+* **Problema:** El mapeo de puertos estaba incorrecto 5000:5001
+* **Solución:** Cambié el mapeo a 5000:5000
