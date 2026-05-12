@@ -1,24 +1,28 @@
 from flask import Flask, jsonify
 import psutil
+import time
 
 app = Flask(__name__)
+start_time = time.time()
 
 @app.route('/')
 def home():
-    return jsonify({"status": "ok", "service": "devops-api"})
+    return jsonify({"status": "running","service": "devops-api"})
 
 @app.route('/health')
 def health():
     cpu = psutil.cpu_percent()
     mem = psutil.virtual_memory().percent
+    uptime = int(time.time() - start_time)
     return jsonify({
         "cpu_percent": cpu,
         "memory_percent": mem,
+        "uptime_seconds": uptime,
         "status": "healthy" if cpu < 80 and mem < 80 else "unhealthy"
     })
 
-@app.route('/metric')
-def metric():
+@app.route('/metrics')
+def metrics():
     cpu = psutil.cpu_percent()
     mem = psutil.virtual_memory().percent
     return f"""# HELP app_cpu_percent CPU usage percentage
