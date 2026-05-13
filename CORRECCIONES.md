@@ -44,3 +44,8 @@
 * **Archivo:** 'app.py'
 * **Problema:** El puerto estaba incorrecto 5000:5001
 * **Solución:** Cambié el puerto a 5000:5000
+
+## Error 7
+* **Archivo:** 'prometheus.yml'
+* **Problema:** El taget de prometheus estaba en localhost y docker funciona con los nombres de los servicios
+* **Solución:** Cambié localhost a "api"
