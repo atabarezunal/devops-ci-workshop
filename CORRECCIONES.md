@@ -49,3 +49,7 @@
 * **Archivo:** 'app.py'
 * **Problema:** La ruta tenia un error de sintaxis , /metric 
 * **Solución:** Cambié la ruta : /metrics
+
+## Error 9 (optimización)
+* **Archivo:** 'Dockerfile'
+* **Solución:** Cambié la python:3.11-slim
