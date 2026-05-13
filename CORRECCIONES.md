@@ -39,3 +39,8 @@
 * **Archivo:** 'docker-compose.yml'
 * **Problema:** El mapeo de puertos estaba incorrecto 5000:5001
 * **Solución:** Cambié el mapeo a 5000:5000
+
+## Error 7
+* **Archivo:** 'app.py'
+* **Problema:** El puerto estaba incorrecto 5000:5001
+* **Solución:** Cambié el puerto a 5000:5000
