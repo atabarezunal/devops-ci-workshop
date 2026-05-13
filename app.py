@@ -33,3 +33,6 @@ app_cpu_percent {cpu}
 app_memory_percent {mem}
 """
     return Response(metrics_data, mimetype='text/plain')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
