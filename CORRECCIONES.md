@@ -53,3 +53,8 @@
 ## Error 9 (optimización)
 * **Archivo:** 'Dockerfile'
 * **Solución:** Cambié la python:3.11-slim
+
+## Error 8
+* **Archivo:** 'app.py'
+* **Problema:** El endpoint /metrics devolvía contenido con tipo text/html, pero Prometheus espera text/plain
+* **Solución:** Importé Response desde Flask y configuré el endpoint /metrics para responder con mimetype='text/plain'
