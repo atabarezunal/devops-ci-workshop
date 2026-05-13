@@ -7,7 +7,7 @@ start_time = time.time()
 
 @app.route('/')
 def home():
-    return jsonify({"status": "running","service": "devops-api"})
+    return jsonify({"status": "ok","service": "devops-api"})
 
 @app.route('/health')
 def health():
